@@ -1,0 +1,93 @@
+1:20
+seq(1,20)
+a <- seq(1,20,2)
+a
+x1 <- 10:20
+x2 <- 25:35
+
+x1+x2
+x1-x2
+x1*x2
+x1/x2
+x1^x2
+
+length(x1)
+x1[4]
+
+a <- 1:10
+b <- c(1,2)
+c <- c(2,3,4)
+
+a+b
+a+c
+a>b
+
+c(one="a", two="b", three="c")
+
+c
+
+u <- c(1:4)
+u
+
+v <- c(a:c)
+
+w <- c("New York", "London", "Singapore", "Dubai", 
+       "Tokyo", "Berlin", "Seoul", "New Delhi")
+
+x <- 1:10
+y <- c(21,14,3,1,5,1,11,9,7,2)
+z <- c("USA", "China", "India","Russia","France","Italy","Japan","Germany","Koria","MH")
+
+ctry1 <- cbind(x,y,z)
+ctry1
+ctry2 <- rbind(x,y,z)
+ctry2
+
+ctry3 <- data.frame(count=x, Countryname=z, GDP=y)
+ctry3
+
+View(ctry3)
+
+class(ctry3)
+
+class(ctry3$Countryname)
+class(ctry3$count)
+class(ctry3$GDP)
+NROW(ctry3)
+NCOL(ctry3)
+row.names(ctry3)
+colnames(ctry3)
+colnames(ctry3)[3]
+
+
+#how to read datasets from external session
+
+getwd()
+
+setwd("C:/Users/pavan/Documents/MyR/Datasets-3.1")
+table1 <-  read.csv(file = "Cars_Retail_Price.csv", header = TRUE, sep = ",")
+str(table1)
+View(table1)
+
+table2 <- read.csv(file.choose())
+View(table2)
+summary(table1)
+
+tm1 <- Tomato
+install.packages("readxl")
+library(readxl)
+read_xlsx(file.choose())
+
+install.packages("writexl")
+library(writexl)
+getwd()
+data("iris")
+data(iris)
+View(iris)
+write_xlsx(iris,"Pavan.xlsx")
+library(WriteXLS)
+writexl::write_xlsx(iris,"Pavan.xlsx")
+
+library(ggplot2)
+
+View(diamonds)
